@@ -1,0 +1,5 @@
+# Rodar no browser com o reload
+cordova run browser -- --live-reload
+
+
+#https://github.com/omefire/cordova-plugin-livereload olhar esse plugin depois

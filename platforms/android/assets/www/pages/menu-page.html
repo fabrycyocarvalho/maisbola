@@ -1,0 +1,56 @@
+<div class="pages">
+  <div data-page="menu-page" class="page navbar-fixed toolbar-fixed" id="page-menu">
+    <div class="navbar">
+      <div class="navbar-inner navbar-on-center">
+        <div class="left">
+          <a href="#" class="link open-panel">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+        <div class="center"><img src="img/logo.png" height="20" class=""></div>
+        <div class="right" id="filter">
+          <a href="pages/filter-page.html" class="link">
+            <span>Filtro</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="toolbar tabbar">
+      <div class="toolbar-inner">
+        <a href="#arenas" class="tab-link tab active" id="tab-link-arenas">
+          Arenas
+        </a>
+        <a href="#news" class="tab-link tab " id="tab-link-news">
+          Notícias
+        </a>
+      </div>
+    </div>
+    <div class="page-content infinite-scroll" data-distance="300">
+      <div class="content-block menu">
+        <div class="tabs">
+          <div class="tab active" id="arenas">
+            <!-- <div class="list-block card-list" id="list-block-arenas"> -->
+            <div class="list-block media-list" id="list-block-arenas">
+              <ul></ul>
+            </div>
+            <!-- Preloader -->
+            <div class="infinite-scroll-preloader-arenas" style="display: none;">
+              <div class="preloader"></div>
+            </div>
+
+          </div>
+          <div class="tab" id="news">
+            <div class="list-block media-list" id="list-block-news">
+              <ul></ul>
+            </div>
+            <!-- Preloader -->
+            <div class="infinite-scroll-preloader-news" style="display: none;">
+              <div class="preloader"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

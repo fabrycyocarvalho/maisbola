@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>My App</title>
+  <!-- Path to Framework7 Library CSS-->
+  <link rel="stylesheet" href="css/framework7.ios.min.css">
+  <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <!-- Path to your custom app styles-->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="theme-green">
+  <div class="statusbar-overlay"></div>
+  <div class="panel-overlay"></div>
+  <!-- Left Panel with Reveal effect -->
+  <div class="panel panel-left panel-reveal theme-default" id="panel-menu">
+    <div class="navbar transparent">
+      <div class="navbar-inner">
+        <div class="left"></div>
+        <div class="center"><img src="img/logo.png" height="20" class=""></div>
+        <div class="right"></div>
+      </div>
+    </div>
+    <div class="content-block">
+      <div class="list-block">
+        <div class="list-group">
+          <ul>
+            <li class="item-content list-panel-all close-panel item-link open-popup" data-popup=".popup-contact">
+              <div class="item-inner">
+                <div class="item-title">Atendimento</div>
+              </div>
+            </li>
+            <li class="item-content list-panel-all close-panel item-link open-popup" data-popup=".popup-term">
+              <div class="item-inner">
+                <div class="item-title">Termos de uso</div>
+              </div>
+            </li>
+            <li class="item-content list-panel-all close-panel item-link open-popup" data-popup=".popup-policy">
+              <div class="item-inner">
+                <div class="item-title">Políticas de privacidade</div>
+              </div>
+            </li>
+            <li class="item-content list-panel-all close-panel item-link" id="evaluate">
+              <div class="item-inner">
+                <div class="item-title">Avalie nosso aplicativo</div>
+              </div>
+            </li>
+            <li class="item-content list-panel-all item-link" id="signout">
+              <div class="item-inner">
+                <div class="item-title">Sair</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="views">
+    <div class="view view-main">
+      <div class="pages">
+        <div data-page="index-page" class="page" id="page-index">
+          <div class="page-content center">
+            <div class="list-block places-list center">
+              <div class="list-block-label">
+                <img src="img/logo.png" height="40" class="">
+              </div>
+              <div class="list-block-label">Seus limites é VOCÊ QUEM FAZ</div>
+            </div>
+            <div class="content-block-title"></div>
+            <div class="list-block">
+              <div class="list-block-label">Começe É BEM SIMPLES...</div>
+            </div>
+
+            <div class="list-block choice-sport-city">
+              <ul>
+                <li>
+                  <a class="item-link smart-select"
+                     data-back-on-select="true">
+                    <select name="sports" id="sports"></select>
+                    <div class="item-content">
+                      <div class="item-inner">
+                        <div class="item-title">Esporte</div>
+                      </div>
+                    </div>
+                  </a>
+              </li>
+              <li>
+                <a class="item-link smart-select"
+                  data-back-on-select="true"
+                  data-searchbar="true"
+                  data-searchbar-placeholder="Pesquisar cidade">
+                  <select name="cities" id="cities"></select>
+                  <div class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title">Cidade</div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+          </ul>
+        </div>
+
+        <div class="content-block">
+          <a id="btn-play" href="pages/menu-page.html" class="button button-fill button-round button-big my-color-green">BUSCAR</a>
+        </div>
+
+        <div class="content-block bottom actions-main">
+          <div class="list-block">
+            <div class="list-block-label center"  id="m1">Já tem uma conta?</div>
+          </div>
+          <div class="row">
+            <div class="col-50"><a href="pages/signup-page.html" class="button button-round button-big color-orange" id="signup-action">Cadastre-se</a></div>
+            <div class="col-50"><a href="pages/login-page.html" class="button button-round button-big color-green" id="login-action">Entrar</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Atendimento Popup -->
+<div class="popup popup-contact page navbar-through no-toolbar no-swipeback">
+    <div class="navbar transparent">
+      <div class="navbar-inner navbar-on-center">
+        <div class="left">
+          <a href="#" class="close-popup link icon-only">
+            <i class="icon icon-back" style="transform: translate3d(0px, 0px, 0px);"></i>
+          </a>
+        </div>
+        <div class="center" style="left: -30px;">
+          Atendimento
+        </div>
+        <div class="right">
+        </div>
+    </div>
+</div>
+  <div class="page-content center">
+    <div class="list-block places-list center">
+      <div class="list-block-label">
+        Atendimento a usuários
+      </div>
+      Para contato ligue no telefone abaixo:
+      <div class="content-block">
+        <a href="tel:(062) 3248-3000" class="button button-fill button-big button-round my-color-green">
+          <i class="fa fa-phone" aria-hidden="true"></i>
+          (062) 3248-3000
+        </a>
+      </div>
+      Ou
+      <div class="list-block-label">
+        No e-mail: contato@maisbola.com.br
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Term of use Popup -->
+<div class="popup popup-term page navbar-through no-toolbar no-swipeback">
+    <div class="navbar transparent">
+      <div class="navbar-inner navbar-on-center">
+        <div class="left">
+          <a href="#" class="close-popup link icon-only">
+            <i class="icon icon-back" style="transform: translate3d(0px, 0px, 0px);"></i>
+          </a>
+        </div>
+        <div class="center" style="left: -30px;">
+          Termo de uso
+        </div>
+        <div class="right">
+        </div>
+    </div>
+</div>
+  <div class="page-content center">
+    <div class="list-block places-list">
+      <div class="list-block-label">
+        Termo de Serviço Mais Bola
+      </div>
+      <div class="list-block-label">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi velit orci, fermentum sit amet viverra vel, ornare in tortor. Vestibulum euismod congue nisi, a volutpat nibh finibus quis. Pellentesque luctus augue quis tempor fermentum. Cras id tincidunt lacus, vel suscipit quam. Nullam egestas porta urna. Vivamus eu nisi quis nibh semper porta vitae a metus. Praesent ac ultricies libero.
+        </p>
+        <p>
+          Ut orci sem, cursus id vehicula at, pharetra non velit. Fusce ac finibus massa. In hac habitasse platea dictumst. Etiam sapien magna, molestie eu turpis a, imperdiet efficitur ex. Nunc in eros sapien. Vestibulum ante est, dapibus non felis non, elementum euismod libero. Praesent nec sagittis lectus. Fusce rhoncus lectus mauris, vel sagittis tellus bibendum eget. Proin commodo rhoncus eros facilisis dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc auctor iaculis facilisis.
+        </p>
+        <p>
+          Nam vitae vestibulum odio. In nec odio ac ante hendrerit imperdiet. Curabitur congue diam et efficitur pretium. Pellentesque pharetra massa vitae enim accumsan ultricies. Nunc euismod eros at orci hendrerit laoreet. Sed ut faucibus nunc, vitae suscipit purus. Phasellus nibh metus, malesuada nec mauris ut, euismod eleifend quam. Duis laoreet est massa, nec viverra magna facilisis ut. Integer egestas ullamcorper pellentesque. Phasellus malesuada pulvinar magna, eget dapibus ipsum dictum eget. Donec pellentesque lectus odio, quis aliquet massa pulvinar eu. Mauris sollicitudin ac est sed gravida. Nulla dictum eget nisl sed lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <p>
+          Praesent ornare nisi id nulla imperdiet molestie. Duis tristique purus sed laoreet feugiat. Nam eu molestie nunc. Vestibulum ac nisi quis metus scelerisque porta. Sed facilisis erat lorem, non vestibulum augue consequat id. Quisque sed malesuada enim. Integer sit amet diam sit amet urna blandit tincidunt at ut risus. Aliquam erat volutpat. Ut mattis ex eu vehicula efficitur. Aliquam erat volutpat. Praesent mattis arcu eu ipsum maximus, eget ultrices eros tristique.
+        </p>
+        <p>
+          Suspendisse sit amet urna odio. Ut vel nisl vel libero lacinia ultricies vitae et lacus. In et erat imperdiet augue porta egestas vehicula eu diam. Vivamus rhoncus turpis lacus, vel pulvinar lectus imperdiet eget. Etiam in tortor urna. Aenean rutrum dignissim neque, eget vehicula ex lacinia et. In ut ultrices libero. Nulla tempor at ipsum at feugiat.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Policy Popup -->
+<div class="popup popup-policy page navbar-through no-toolbar no-swipeback">
+    <div class="navbar transparent">
+      <div class="navbar-inner navbar-on-center">
+        <div class="left">
+          <a href="#" class="close-popup link icon-only">
+            <i class="icon icon-back" style="transform: translate3d(0px, 0px, 0px);"></i>
+          </a>
+        </div>
+        <div class="center" style="left: -30px;">
+          Política de privacidade
+        </div>
+        <div class="right">
+        </div>
+    </div>
+</div>
+  <div class="page-content">
+    <div class="list-block places-list center">
+      <div class="list-block-label">
+        Política de Privacidade, Segurança e Consetimento de Uso de Informações
+      </div>
+      <div class="list-block-label">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi velit orci, fermentum sit amet viverra vel, ornare in tortor. Vestibulum euismod congue nisi, a volutpat nibh finibus quis. Pellentesque luctus augue quis tempor fermentum. Cras id tincidunt lacus, vel suscipit quam. Nullam egestas porta urna. Vivamus eu nisi quis nibh semper porta vitae a metus. Praesent ac ultricies libero.
+        </p>
+        <p>
+          Ut orci sem, cursus id vehicula at, pharetra non velit. Fusce ac finibus massa. In hac habitasse platea dictumst. Etiam sapien magna, molestie eu turpis a, imperdiet efficitur ex. Nunc in eros sapien. Vestibulum ante est, dapibus non felis non, elementum euismod libero. Praesent nec sagittis lectus. Fusce rhoncus lectus mauris, vel sagittis tellus bibendum eget. Proin commodo rhoncus eros facilisis dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc auctor iaculis facilisis.
+        </p>
+        <p>
+          Nam vitae vestibulum odio. In nec odio ac ante hendrerit imperdiet. Curabitur congue diam et efficitur pretium. Pellentesque pharetra massa vitae enim accumsan ultricies. Nunc euismod eros at orci hendrerit laoreet. Sed ut faucibus nunc, vitae suscipit purus. Phasellus nibh metus, malesuada nec mauris ut, euismod eleifend quam. Duis laoreet est massa, nec viverra magna facilisis ut. Integer egestas ullamcorper pellentesque. Phasellus malesuada pulvinar magna, eget dapibus ipsum dictum eget. Donec pellentesque lectus odio, quis aliquet massa pulvinar eu. Mauris sollicitudin ac est sed gravida. Nulla dictum eget nisl sed lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <p>
+          Praesent ornare nisi id nulla imperdiet molestie. Duis tristique purus sed laoreet feugiat. Nam eu molestie nunc. Vestibulum ac nisi quis metus scelerisque porta. Sed facilisis erat lorem, non vestibulum augue consequat id. Quisque sed malesuada enim. Integer sit amet diam sit amet urna blandit tincidunt at ut risus. Aliquam erat volutpat. Ut mattis ex eu vehicula efficitur. Aliquam erat volutpat. Praesent mattis arcu eu ipsum maximus, eget ultrices eros tristique.
+        </p>
+        <p>
+          Suspendisse sit amet urna odio. Ut vel nisl vel libero lacinia ultricies vitae et lacus. In et erat imperdiet augue porta egestas vehicula eu diam. Vivamus rhoncus turpis lacus, vel pulvinar lectus imperdiet eget. Etiam in tortor urna. Aenean rutrum dignissim neque, eget vehicula ex lacinia et. In ut ultrices libero. Nulla tempor at ipsum at feugiat.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDwKAH7EQIulASmQ8fu5HvfR5usUmaPlw" async defer></script>
+  <script type="text/javascript" src="scripts/framework7.min.js"></script>
+  <script type="text/javascript" src="scripts/helper/util.js"></script>
+  <script type="text/javascript" src="scripts/main.js"></script>
+
+</body>
+</html>
