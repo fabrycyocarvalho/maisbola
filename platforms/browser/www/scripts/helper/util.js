@@ -21,27 +21,28 @@ function Helper (){
     this.converterCoordenadas = function (lat, lng) {
         var lt, lg;
 
-        if(isNaN(parseFloat(lat)) === true && isNaN(parseFloat(lng)) === true){
-            var hora = lat.substring(0, 2);
-            var minutos = lat.substring(3, 5);
-            var segundos = lat.substring(6, 11);
 
-            lt = hora + (minutos / 60) + (segundos / 3600);
-
-            hora = lng.substring(0, 2);
-            minutos = lng.substring(3, 5);
-            segundos = lng.substring(6, 11);
-
-            lg = hora + (minutos / 60) + (segundos / 3600);
-        }else{
+        if(lat.indexOf("°") == -1 && lng.indexOf("°") == -1){
             lt = parseFloat(lat);
             lg = parseFloat(lng);
+        }else{
+            var hora = subStrWithParse(lat, 0, 2);
+            var minutos = subStrWithParse(lat, 3, 5);
+            var segundos = subStrWithParse(lat, 6, 11);
+
+            lt = (hora + (minutos / 60) + (segundos / 3600)) * -1;
+
+            hora = subStrWithParse(lng, 0, 2);
+            minutos = subStrWithParse(lng, 3, 5);
+            segundos = subStrWithParse(lng, 6, 11);
+
+            lg = (hora + (minutos / 60) + (segundos / 3600)) * -1;
         }
-
-        //lt= -16.79388888888889;
-        //lg =  -49.35527777777778;
-
         return {lat: lt, lng: lg};
+    }
+
+    function subStrWithParse(s, b, e) {
+        return parseFloat(s.substring(b, e));
     }
 };
 
